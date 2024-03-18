@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PetsBuy- Sign Up</title>
+  <link rel="stylesheet" href="signup.css">
+</head>
+<body>
+  <div class="signup-container">
+    <img src="logo.png" alt="PetsBuy" class="logo">
+    <form class="signup-form" id="signupForm">
+      <h2>Sign Up for PetsBuy</h2>
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      <button type="submit">Sign Up</button>
+      <p class="login-link">Already have an account? <a href="login.html">Login</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById('signupForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent the default form submission
+
+      // Get input values
+      var username = document.getElementById('username').value;
+      var email = document.getElementById('email').value;
+      var password = document.getElementById('password').value;
+
+      // Perform validation if needed
+
+      // Here you can perform additional validation checks before submitting the form
+
+      // Assuming validation passed, you can proceed with signup
+      alert('Signup successful!'); // Replace with your desired action
+      // Redirect to login page or another page
+      window.location.href = 'login.html';
+    });
+  </script>
+</body>
+</html>
